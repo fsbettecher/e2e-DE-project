@@ -33,4 +33,5 @@ models:
   e2e_de_project:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: view  # Caso eu queira criar uma table ao invés de view, é só alterar 'view' para 'table'
+      

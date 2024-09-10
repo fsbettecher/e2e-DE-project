@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: e2e_de_project
+    schema: public
+    tables:
+      - name: commodities
+        description: "Tabema que contém dados históricos de commodities"
+        columns:
+        - name: Date
+          description: "Data da observação"
+        - name: Close
+          description: "Preço de fechamento da commodity"
+        - name: symbol
+          description: "Símbolo da commodity"
