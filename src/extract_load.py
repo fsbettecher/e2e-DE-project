@@ -25,7 +25,7 @@ engine = create_engine(database_url)
 def search_commodities_data(symbol, period='5d', interval='1d'):
     ticker = yf.Ticker(symbol)
     data = ticker.history(period=period, interval=interval)[['Close']]
-    data['symbol'] = symbol
+    data['simbolo'] = symbol
 
     return data
 
