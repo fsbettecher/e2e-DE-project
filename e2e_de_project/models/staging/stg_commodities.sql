@@ -1,25 +1,22 @@
 -- import
 
-WITH source AS (
-    SELECT
+with source as (
+    select
         "Date",
         "Close",
-        "symbol"
-    FROM
-        {{ source ('e2e_de_project', 'commodities')  }}
+        "simbolo"
+    from 
+        {{ source ('e2e_de_project', 'commodities') }}
 ),
 
--- renamed
+renamed as (
 
-renamed AS (
-    SELECT
-        cast("Date" as date) as "data",
-        "Close" as "Closure_value",
-        symbol
-    FROM
+    select
+        cast("Date" as date) as data,
+        "Close" as valor_fechamento,
+        simbolo
+    from
         source
 )
 
--- select * from
-
-SELECT * FROM renamed
+select * from renamed
